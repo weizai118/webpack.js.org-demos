@@ -6,6 +6,8 @@ function component() {
 //    return array.join(str)
 //  }
 
+  this.alert('Hmmm, this probably isn\'t a great idea...')
+
   element.innerHTML = join(['Hello', 'webpack'], ' ');
 
   return element;
