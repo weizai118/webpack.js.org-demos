@@ -6,7 +6,11 @@ module.exports = {
     main: './src/index.js'
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'])
+    new CleanWebpackPlugin(['dist'], {
+      exclude: ['index.html'],
+      verbose: true,
+      dry: false,
+    })
   ],
   output: {
     filename: '[name].[chunkhash].js',
