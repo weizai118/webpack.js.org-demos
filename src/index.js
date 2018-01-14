@@ -1,14 +1,9 @@
-import _ from 'lodash';
-import Print from './print';
-
-function component() {
-  var element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.onClick = Print.bind(null, 'Hello webpack!');
-
-  return element;
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').then(registration => {
+      console.dir('SW registered: ', registration);
+    }).catch(registrationError => {
+      console.log('SW registration failed: ', registrationError);
+    });
+  });
 }
-
-document.body.appendChild(component());
