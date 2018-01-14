@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "html-webpack-plugin": "^2.29.0",
+    "lodash": "^4.17.4",
+    "webpack": "^3.4.1"
+  }
+}
